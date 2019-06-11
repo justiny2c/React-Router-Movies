@@ -29,7 +29,8 @@ export default class MovieList extends Component {
           <Link to={`/movies/${movie.id}`}>
             <MovieCard 
               key={movie.id} 
-              movie={movie} 
+              movie={movie}
+              addToSavedList={this.props.addToSavedList} 
               />
           </Link>
         ))}
