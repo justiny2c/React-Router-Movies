@@ -48,7 +48,8 @@ export default class Movie extends Component {
       <div className="save-wrapper">
         <MovieCard
               key={this.state.movie.id} 
-              movie={this.state.movie} 
+              movie={this.state.movie}
+              addToSavedList={this.props.addToSavedList} 
               />
       </div>
     );

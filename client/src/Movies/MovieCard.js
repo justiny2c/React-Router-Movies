@@ -3,7 +3,6 @@ import React from 'react';
 const MovieCard = props => {
   return (
   <div className="movie-card">
-    {/* <Link to={`/movies/${props.movie.id}`}> */}
       <h2>{props.movie.title}</h2>
       <div className="movie-director">
         Director: <em>{props.movie.director}</em>
@@ -17,9 +16,13 @@ const MovieCard = props => {
         <div key={star} className="movie-star">
           {star}
         </div>
+        
       ))}
 
-      {/* </Link> */}
+      <div 
+        className="save-button"
+        onClick={() => props.addToSavedList(props.movie)}>
+        Save</div>
     </div>
   )};
 
